@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActJSClase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+
+  <div class="container" style="margin-left: 40%; margin-top: 50px;">
+    <div id="app">
+      <h1>Turismo en México</h1>
+      <select v-model="selected">
+        <option disabled value="">Seleccione un estado</option>
+        <option>Morelia</option>
+        <option>Nuevo Leon</option>
+        <option>Guanajuato</option>
+      </select>
+      <span>Seleccionado: {{ selected }}</span>
+      <template v-if="selected === 'Morelia'">
+        <br><br><img  src="https://www.mimorelia.com/wp-content/uploads/2018/01/grid-noticias-recomendadas/morelia-turismo/01/morelia.jpg" style="width:600px;height:300px;">
+      </template>
+      <template v-else-if="selected === 'Nuevo Leon'">
+        <br><br><img src="https://lideresmexicanos.com/wp-content/uploads/2017/07/00152516-original.jpg" style="width:600px;height:300px;">
+      </template>
+      <template v-else-if="selected === 'Guanajuato'">
+        <br><br><img src="https://www.nitu.mx/wp-content/uploads/2018/04/Guanajuato-Turismo.jpg" style="width:600px;height:300px;">
+      </template>
+      <template v-else>
+        <br><br><img src="https://www.reportur.com/wp-content/uploads/2020/03/Asetur-mexicodestinos.jpg" style="width:600px;height:300px;">
+      </template>
+
+    </div>
+
+  <div id="jumper">
+    <br><h2>Veamos tu futuro</h2>
+    <p>Da click en el boton para ver tu futuro</p>
+    <button class="btn btn-primary" v-on:click="jump = Math.floor(Math.random() * 10)">Futuro</button><br>
+    <template v-if="jump === 1">
+      <br><br><img src="https://www.publico.es/uploads/2016/06/03/57514879da105.jpg" style="width:600px;height:300px;">
+    </template>
+    <template v-else-if="jump > 1">
+      <br><br><img src="https://www.edreams.es/blog/wp-content/uploads/sites/5/2012/07/libre-en-la-playa.jpg" style="width:600px;height:300px;">
+    </template>
+  </div>
+
+  <div id="playas">
+    <h2>Mejores playas de México</h2>
+    <ul >
+      <li v-for="item in items">
+        {{ item.playa }}
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#jumper',
+      data: {
+        jump: 0
+      }
+    })
+  </script>
+  <script>
+    var app2=new Vue({
+      el: '#app',
+      data: {
+          selected: ''
+      }
+  });
+  </script>
+  <script>
+  var app3 = new Vue({
+    el: '#playas',
+    data: {
+      items: [
+        { playa: 'Playa Delfines' },
+        { playa: 'Playa Escondida' },
+        { playa: 'Costa Esmeralda' },
+        { playa: 'Playa Rosa' },
+        { playa: 'Bahías de Huatilco' }
+      ]
+    }
+    })
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
