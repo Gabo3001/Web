@@ -1,80 +1,113 @@
- <<!DOCTYPE html>
+ <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
      <title>6807</title>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    </head>
-   <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-       <a class="navbar-brand" href="#">Curricula</a>
+   <body class="bg-light">
+
+     <!--Navigation-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+       <a class="navbar-brand" href="#">Menu</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon">Menu</span>
+         <span class="navbar-toggler-icon">Estudios</span>
        </button>
 
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav mr-auto">
            <li class="nav-item active">
-             <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="#Estudios">Estudios <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item active">
+             <a class="nav-link" href="#Practicas">Practicas Laborales <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item active">
+             <a class="nav-link" href="#Hobbies">Hobbies <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item active">
+             <a class="nav-link" href="#">Experiencias <span class="sr-only">(current)</span></a>
            </li>
          </ul>
        </div>
      </nav>
-
-     <div class="jumbotron text-center">
-      <h1>Gabriel Ortega Jacobo</h1>
-      <h4>A01176807</h4>
+     <!--Start-->
+     <br>
+     <br>
+     <br>
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-3">
+           <img src="Patata.jpg" class="rounded-circle img-fluid" alt="Cinque Terre" width="250" height="250">
+         </div>
+         <div class="col-sm-8 text-center jumbotron jumbotron-fluid bg-light">
+           <h1>Gabriel Ortega Jacobo</h1>
+           <h4>Ingeniero en tecnologias computacionales</h4>
+         </div>
+       </div>
     </div>
-
+    <!--Estudios-->
+    <br>
+    <br>
+    <br>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4" id=Estudios>
-          <h3>Estudios</h3>
+
+        <div class="col-sm-6" id=Estudios>
+          <h2>Estudios</h2>
           <ul >
             <li v-for="item in items">
               {{ item.estudio }}
             </li>
           </ul>
         </div>
-        <div class="col-sm-4" id=Practicas>
-          <h3>Practicas Laborales</h3>
+        <div class="col-sm-5">
+          <img src="descarga.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236">
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6">
+          <img src="descarga.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236">
+        </div>
+        <div class="col-sm-5" id=Practicas>
+          <h2>Practicas Laborales</h2>
           <ul >
             <li v-for="item in items">
               {{ item.practica }}
             </li>
           </ul>
         </div>
-        <div class="col-sm-4" id=Hobbies>
-          <h3>Hobbies</h3>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6" id=Hobbies>
+          <h2>Hobbies</h2>
           <ul >
             <li v-for="item in items">
               {{ item.hobbie }}
             </li>
           </ul>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+        </div>
+        <div class="col-sm-5">
+          <img src="descarga.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236">
         </div>
       </div>
     </div>
-
-    <div class="card text-center">
-      <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" href="#Estudios">Estudios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Practicas">Practicas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Hobbies" tabindex="-1" aria-disabled="true">Hobbies</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <br>
+    <br>
 
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -84,7 +117,8 @@
       data: {
         items: [
           { estudio: 'Preparatoria: Tecnologico de Monterrey Campus VA' },
-          { estudio: 'Bachillerato: Tecnologico de Monterrey Campus MTY' }
+          { estudio: 'Bachillerato: Tecnologico de Monterrey Campus MTY' },
+          { estudio: 'Carrera: Ingeniero en Tecnologias Computacionales (ITC)' }
         ]
       }
       })
