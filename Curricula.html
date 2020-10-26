@@ -17,16 +17,16 @@
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav mr-auto">
            <li class="nav-item active">
-             <a class="nav-link" href="#Estudios">Estudios <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="#NavEstudios">Estudios <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item active">
-             <a class="nav-link" href="#Practicas">Practicas Laborales <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="#NavPracticas">Practicas Laborales <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item active">
-             <a class="nav-link" href="#Hobbies">Hobbies <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="#NavHobbies">Hobbies <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item active">
-             <a class="nav-link" href="#">Experiencias <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="#NavExperiencia">Experiencia <span class="sr-only">(current)</span></a>
            </li>
          </ul>
        </div>
@@ -47,9 +47,11 @@
        </div>
     </div>
     <!--Estudios-->
-    <br>
-    <br>
-    <br>
+    <div class="container" id=NavEstudios>
+      <br>
+      <br>
+      <br>
+    </div>
     <div class="container">
       <div class="row">
 
@@ -61,20 +63,27 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-5">
-          <img src="descarga.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236">
+        <div class="col-sm-5" id=numEstudios>
+          <input type="image"  v-if="imgEstudios == 0" src="https://0701.static.prezi.com/preview/v2/ohibkyhkhl6r44uqyeosuqu53h6jc3sachvcdoaizecfr3dnitcq_1_0.png" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgEstudios += 1">
+          <input type="image"  v-if="imgEstudios == 1" src="https://cdn-3.expansion.mx/dims4/default/34638d7/2147483647/strip/true/crop/362x217+0+0/resize/800x480!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2014%2F08%2F15%2Ftec-de-monterrey.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgEstudios += 1">
+          <input type="image"  v-if="imgEstudios == 2" src="ITC.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgEstudios = 0">
         </div>
       </div>
     </div>
-
-    <br>
-    <br>
-    <br>
+    <!--Practicas-->
+    <div class="container" id=NavPracticas>
+      <br>
+      <br>
+      <br>
+    </div>
     <div class="container">
       <div class="row">
 
-        <div class="col-sm-6">
-          <img src="descarga.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236">
+        <div class="col-sm-6" id=numPracticas>
+          <input type="image"  v-if="imgPracticas == 0" src="https://d1eilicilqktnj.cloudfront.net/franchises/logo_franchises/13/original/kz-logo-color-full.png?1539208253" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgPracticas += 1">
+          <input type="image"  v-if="imgPracticas == 1" src="https://timesofsandiego.com/wp-content/uploads/2015/08/Petco-Logo.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgPracticas += 1">
+          <input type="image"  v-if="imgPracticas == 2" src="https://previews.123rf.com/images/zephyr18/zephyr181708/zephyr18170800032/83652425-joven-asi%C3%A1tica-acrob%C3%A1tica-haciendo-su-rendimiento-de-gimnasia-en-aro-a%C3%A9reo-o-anillo-a%C3%A9reo.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgPracticas += 1">
+          <input type="image"  v-if="imgPracticas == 3" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1c28c39986253.560ddd7426a38.png" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgPracticas = 0">
         </div>
         <div class="col-sm-5" id=Practicas>
           <h2>Practicas Laborales</h2>
@@ -86,10 +95,12 @@
         </div>
       </div>
     </div>
-
-    <br>
-    <br>
-    <br>
+    <!--Practicas-->
+    <div class="container" id=NavHobbies>
+      <br>
+      <br>
+      <br>
+    </div>
     <div class="container">
       <div class="row">
 
@@ -101,8 +112,36 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-5">
-          <img src="descarga.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236">
+        <div class="col-sm-5" id=numHobbies>
+          <input type="image"  v-if="imgHobbies == 0" src="https://images.immediate.co.uk/production/volatile/sites/32/2020/02/top-20-amigurumi-patterns-header-726d251.jpg?quality=90&resize=768,574" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgHobbies += 1">
+          <input type="image"  v-if="imgHobbies == 1" src="https://cdn.mos.cms.futurecdn.net/EtoritGhz9NhJmsDR5jSoY.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgHobbies += 1">
+          <input type="image"  v-if="imgHobbies == 2" src="https://www.aerialessentials.com/wp-content/uploads/2020/05/LyraFull.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgHobbies += 1">
+          <input type="image"  v-if="imgHobbies == 3" src="https://as.com/meristation/imagenes/2019/12/05/noticias/1575537794_518193_1575537876_noticia_normal.jpg" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgHobbies = 0">
+        </div>
+      </div>
+    </div>
+    <!--Experiencias-->
+    <div class="container" id=NavExperiencia>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6" id=numExperiencia>
+          <input type="image"  v-if="imgExperiencia == 0" src="https://secureservercdn.net/198.71.233.107/25l.a4e.myftpupload.com/wp-content/uploads/2020/06/6038586442907648-720x340.png" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgExperiencia += 1">
+          <input type="image"  v-if="imgExperiencia == 1" src="https://live.mrf.io/statics/i/ps/www.muylinux.com/wp-content/uploads/2011/07/java-logo.jpg?width=1200&enable=upscale" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgExperiencia += 1">
+          <input type="image"  v-if="imgExperiencia == 2" src="https://lenguajesdeprogramacion.net/wp-content/uploads/2018/08/SQL-lenguaje-de-programacion-logo.png" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgExperiencia += 1">
+          <input type="image"  v-if="imgExperiencia == 3" src="https://lh3.googleusercontent.com/proxy/Kt546aWhNjy0pnwNZpeEOPLaNHu_thE7EUuc2X0d5QJD932FPLgbNBlzzbRTL7xVB2u7AnDeJg95tlF8yznA-A3yfb4Cznelfhk48GZFXlixhoF36dg5vomRUmda" class="rounded img-fluid" alt="Cinque Terre" width="500" height="236" v-on:click="imgExperiencia = 0">
+        </div>
+        <div class="col-sm-5" id=Experiencias>
+          <h2>Experiencia en programación</h2>
+          <ul >
+            <li v-for="item in items">
+              {{ item.experiencia }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -128,6 +167,8 @@
       el: '#Practicas',
       data: {
         items: [
+          { practica: 'Cajero en Kidzania' },
+          { practica: 'Cajero en Petco' },
           { practica: 'Maestro danza aerea en Synergy Aerial Arts' },
           { practica: 'Desarrollador en Ecaresoft' }
         ]
@@ -145,6 +186,51 @@
           { hobbie: 'Jugar videojuegos' }
         ]
       }
+      })
+    </script>
+    <script>
+      var list4 = new Vue({
+        el: '#Experiencias',
+        data: {
+          items: [
+            { experiencia: 'C++' },
+            { experiencia: 'Java' },
+            { experiencia: 'SQL' },
+            { experiencia: 'Python' }
+          ]
+        }
+        })
+      </script>
+    <script>
+      var app = new Vue({
+        el: '#numEstudios',
+        data: {
+          imgEstudios: 0
+        }
+      })
+    </script>
+    <script>
+      var app = new Vue({
+        el: '#numPracticas',
+        data: {
+          imgPracticas: 0
+        }
+      })
+    </script>
+    <script>
+      var app = new Vue({
+        el: '#numHobbies',
+        data: {
+          imgHobbies: 0
+        }
+      })
+    </script>
+    <script>
+      var app = new Vue({
+        el: '#numExperiencia',
+        data: {
+          imgExperiencia: 0
+        }
       })
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
