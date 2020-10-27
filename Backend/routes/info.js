@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require("../db")
 
 router.get('/', (req, res) => {
-    db.any("SELECT name from product;")
+    db.any("SELECT * from info;")
     .then(rows => {
         console.log(rows);
         res.json(rows)
